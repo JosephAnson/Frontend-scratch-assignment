@@ -11,12 +11,14 @@ export default function App() {
   return (
     <>
       <Nav />
-      <Routes>
-        <Route path='/' element={<Navigate replace to='/challenge-1' />} />
-        <Route path='/challenge-1' element={<Challenge1 />} />
-        <Route path='/challenge-2' element={<Challenge2 />} />
-        <Route path='/challenge-3' element={<Challenge3 />} />
-      </Routes>
+      <div className="container mx-auto">
+        <Routes>
+          <Route path="/" element={<Navigate replace to="/challenge-1" />} />
+          <Route path="/challenge-1" element={<Challenge1 />} />
+          <Route path="/challenge-2" element={<Challenge2 />} />
+          <Route path="/challenge-3" element={<Challenge3 />} />
+        </Routes>
+      </div>
     </>
   );
 }
