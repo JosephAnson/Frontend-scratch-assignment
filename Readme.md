@@ -2,7 +2,7 @@
 
 Hello and welcome to your assignment! In this document I'm going to lay out the objectives, and some ground rules.
 This test is primarily to test your ability to set up and start working on something in React with Typescript.
- 
+
 # Technologies
 The following technologies must be used:
 
