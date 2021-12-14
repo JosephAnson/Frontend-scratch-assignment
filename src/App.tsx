@@ -4,9 +4,9 @@ import { Route, Routes } from 'react-router';
 import { Navigate } from 'react-router-dom';
 import Nav from './components/Nav';
 
-import Challenge1 from './routes/Challenge1';
+import Challenge1 from './routes/Challenge1/Challenge1';
 import Challenge2 from './routes/Challenge2/Challenge2';
-import Challenge3 from './routes/Challenge3';
+import Challenge3 from './routes/Challenge3/Challenge3';
 
 export default function App() {
   return (

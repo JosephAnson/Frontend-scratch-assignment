@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent, screen } from '@testing-library/react';
-import Challenge2 from './challenge-2';
+import Challenge2 from './Challenge2';
 
 describe('Challenge 2 Tests', () => {
   test('create single box', async () => {

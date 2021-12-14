@@ -10,7 +10,7 @@ export default function Challenge2() {
     <div className="box-row sm:flex" data-testid="box-row" key={index}>
       {row.map((box) => (
         <div
-          className="box bg-amber-300 p-4 w-full m-2 flex content-center justify-center	"
+          className="box bg-amber-300 p-4 w-full m-2 flex content-center justify-center"
           key={box}
         >
           {box}
@@ -23,6 +23,7 @@ export default function Challenge2() {
     <main>
       <h1 className="font-semibold text-lg mb-2">Challenge 2!</h1>
       <button
+        type="button"
         onClick={() => setBoxes(boxes.concat([boxes.length]))}
         className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mb-2"
       >
