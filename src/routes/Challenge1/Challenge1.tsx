@@ -11,7 +11,7 @@ export default function Challenge1() {
   const [error, setError] = useState(false);
   const [sums, setSums] = useState<number[]>([]);
 
-  function addValues() {
+  function addValues(input1: string, input2: string): void {
     setError(false);
 
     if (/^[0-9]+([,.][0-9]+)?$/g.test(input1) && /^[0-9]+([,.][0-9]+)?$/g.test(input2)) {
@@ -32,7 +32,6 @@ export default function Challenge1() {
     <main>
       <h1 className="font-semibold text-lg mb-2">Challenge 1!</h1>
       <h2 className="font-medium text-md mb-2">Calculator</h2>
-
       <form>
         <Field label="Value 1" labelFor="value-1">
           <Input id="value-1" value={input1} onChange={(event) => setInput1(event.target.value)} />
@@ -40,15 +39,13 @@ export default function Challenge1() {
         <Field label="Value 2" labelFor="value-2">
           <Input id="value-2" value={input2} onChange={(event) => setInput2(event.target.value)} />
         </Field>
-        <Button onClick={() => addValues()}>Add Sum to Collected Sums</Button>
+        <Button onClick={() => addValues(input1, input2)}>Add Sum to Collected Sums</Button>
       </form>
-
       {error && (
         <div className="inline-block text-sm font-medium bg-red-500 text-white px-4 py-4 rounded my-2">
           We only accept valid decimal numbers, no sums have been added
         </div>
       )}
-
       <h3 className="font-medium text-md mb-2">Collected Sums</h3>
       Total Number is: {allSums}
     </main>

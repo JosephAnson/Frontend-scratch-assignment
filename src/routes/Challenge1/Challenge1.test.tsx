@@ -89,7 +89,7 @@ describe('Challenge 1 Tests', () => {
     submitValues('1231123', '0.109823');
     submitValues('123.123019', '0.233333');
 
-    expect(await screen.findByText('Total Number is: 1231286.6963983271')).toBeVisible();
+    expect(await screen.findByText('Total Number is: 1232487.7003983271')).toBeVisible();
   });
 
 });
