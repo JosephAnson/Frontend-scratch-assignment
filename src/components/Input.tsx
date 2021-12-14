@@ -4,6 +4,7 @@ interface InputProps {
   id?: string;
   name?: string;
   value?: string;
+  placeholder?: string;
   onChange: ChangeEventHandler<HTMLInputElement>;
 }
 
@@ -17,7 +18,7 @@ export default function Field(props: InputProps) {
         name={props.name}
         className="input focus:ring-indigo-500 focus:border-indigo-500 block w-full px-4 sm:text-sm border-gray-300
       rounded-md"
-        placeholder="Start Searching..."
+        placeholder={props.placeholder ?? "Start typing..."}
         autoComplete="off"
         onChange={props.onChange}
       />
