@@ -1,14 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function NavItem({ children, to }: { to: string; children: JSX.Element | string }) {
+  const navClasses =
+    'inline-block py-4 px-2 font-medium text-gray-500 hover:text-gray-900 no-underline';
+  const activeColor = 'text-indigo-600 hover:text-indigo-800';
   return (
-    <Link
-      className="inline-block py-4 px-2 font-medium text-gray-500 hover:text-gray-900 no-underline"
-      to={to}
-    >
+    <NavLink className={({ isActive }) => `${navClasses} ${isActive ? activeColor : ''}`} to={to}>
       {children}
-    </Link>
+    </NavLink>
   );
 }
 
