@@ -16,7 +16,7 @@ export default function Field(props: InputProps) {
         value={props.value}
         type="text"
         name={props.name}
-        className="input focus:ring-indigo-500 focus:border-indigo-500 block w-full px-4 sm:text-sm border-gray-300
+        className="input h-10 focus:ring-indigo-500 focus:border-indigo-500 block w-full px-4 sm:text-sm border-gray-300
       rounded-md"
         placeholder={props.placeholder ?? "Start typing..."}
         autoComplete="off"

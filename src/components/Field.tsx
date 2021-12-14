@@ -3,7 +3,8 @@ import React from 'react';
 export interface FieldProps {
   label: string;
   labelFor: string;
-  children: JSX.Element;
+  help?: string;
+  children: JSX.Element | JSX.Element[];
 }
 
 export default function Field(props: FieldProps) {
@@ -13,6 +14,7 @@ export default function Field(props: FieldProps) {
         {props.label}
       </label>
       {props.children}
+      {props.help && <p className="text-xs text-gray-500 mb-2">{props.help}</p>}
     </div>
   );
 }
