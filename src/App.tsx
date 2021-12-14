@@ -1,11 +1,12 @@
 import React from 'react';
 
-import Nav from './components/Nav';
 import { Route, Routes } from 'react-router';
 import { Navigate } from 'react-router-dom';
-import Challenge1 from './routes/challenge-1';
-import Challenge2 from './routes/Challenge2/challenge-2';
-import Challenge3 from './routes/challenge-3';
+import Nav from './components/Nav';
+
+import Challenge1 from './routes/Challenge1';
+import Challenge2 from './routes/Challenge2/Challenge2';
+import Challenge3 from './routes/Challenge3';
 
 export default function App() {
   return (
