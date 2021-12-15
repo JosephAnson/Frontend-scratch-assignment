@@ -54,3 +54,12 @@ Try and make it clear and simple to see different boxes inside the rows, bonus p
 You are required to add a localization feature to this page. You are required to add an input and a dropdown and a button with the text 'GO' written inside. The Input should only allow string input. The Dropdown will have `EN` and one other language of your choosing (as an example for dutch we could put `NL`). When a user enters a string and selects a language you will be required to match it against an entry inside a separate json localization file, and the result should be printed out underneath our form.
 
 # Notes
+
+My first ever project in React finished, certainly improvements that could've been made. Halfway through I discovered there 
+were better starting cli commands I could have used, so I had to manually setup eslint and jest which took a little
+time to figure out the different packages between React and Vue. Overall it probably took around 5 hours in total of dev time.
+
+* Opted for tailwind for css as with vite, there's dynamic css style creation (https://windicss.org/integrations/vite.html) and works the similar to styled components. Doesn't auto generate when statically generated though like the demo website, can be seen when running the vite server locally.
+* Could've introduced a form validation library like Formik, opted for a basic error message system as I'd need to learn the api of the form validation library as well
+
+Let me know if there's anything you'd like to see changed or added let me know.
