@@ -5,18 +5,18 @@ import Input from '../../components/Input';
 import Button from '../../components/Button';
 
 export default function Challenge1() {
-  const defaultDecimalValue = '0.0000000';
+  const defaultDecimalValue = '';
   const [input1, setInput1] = useState(defaultDecimalValue);
   const [input2, setInput2] = useState(defaultDecimalValue);
   const [error, setError] = useState(false);
   const [sums, setSums] = useState<number[]>([]);
 
-  function addValues(input1: string, input2: string): void {
+  function addValues(firstValue: string, secondValue: string): void {
     setError(false);
 
-    if (/^[0-9]+([,.][0-9]+)?$/g.test(input1) && /^[0-9]+([,.][0-9]+)?$/g.test(input2)) {
+    if (/^[0-9]+([,.][0-9]+)?$/g.test(firstValue) && /^[0-9]+([,.][0-9]+)?$/g.test(secondValue)) {
       Decimal.set({ toExpNeg: -20 });
-      setSums([...sums, new Decimal(input1).plus(input2).toNumber()]);
+      setSums([...sums, new Decimal(firstValue).plus(secondValue).toNumber()]);
     } else {
       setError(true);
     }
@@ -34,10 +34,20 @@ export default function Challenge1() {
       <h2 className="font-medium text-md mb-2">Calculator</h2>
       <form>
         <Field label="Value 1" labelFor="value-1">
-          <Input id="value-1" value={input1} onChange={(event) => setInput1(event.target.value)} />
+          <Input
+            id="value-1"
+            value={input1}
+            onChange={(event) => setInput1(event.target.value)}
+            placeholder="0.0000000"
+          />
         </Field>
         <Field label="Value 2" labelFor="value-2">
-          <Input id="value-2" value={input2} onChange={(event) => setInput2(event.target.value)} />
+          <Input
+            id="value-2"
+            value={input2}
+            onChange={(event) => setInput2(event.target.value)}
+            placeholder="0.0000000"
+          />
         </Field>
         <Button onClick={() => addValues(input1, input2)}>Add Sum to Collected Sums</Button>
       </form>
@@ -47,7 +57,7 @@ export default function Challenge1() {
         </div>
       )}
       <h3 className="font-medium text-md mb-2">Collected Sums</h3>
-      Total Number is: {allSums}
+      <p>Total Number is: {allSums}</p>
     </main>
   );
 }

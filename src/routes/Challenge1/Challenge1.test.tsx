@@ -42,7 +42,7 @@ describe('Challenge 1 Tests', () => {
     render(<Challenge1 />);
 
     // Checks special characters one at a time
-    const specialCharacters: string[] = `~!@#$%^&*()-_=+[]\{}|;':",./<>?`.split('');
+    const specialCharacters: string[] = `~!@#$%^&*()-_=+[]\\{}|;':",./<>?`.split('');
 
     for (let i = 0; i < specialCharacters.length; i++) {
       submitValues(specialCharacters[i], specialCharacters[i]);
@@ -91,5 +91,4 @@ describe('Challenge 1 Tests', () => {
 
     expect(await screen.findByText('Total Number is: 1232487.7003983271')).toBeVisible();
   });
-
 });

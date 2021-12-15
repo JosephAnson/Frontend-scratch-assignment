@@ -19,17 +19,17 @@ export default function Challenge3() {
     nl: NL
   };
 
-  function getLanguageString(language: string, languageString: string): void {
+  function getLanguageString(lang: string, langString: string): void {
     setError('');
 
-    if (!languageString) {
+    if (!langString) {
       setError('Need to enter language string');
       return;
     }
 
-    const lowercaseLanguageString = languageString.toLowerCase();
-    if (lowercaseLanguageString in languages['en']) {
-      setResult(languages[language][lowercaseLanguageString]);
+    const lowercaseLanguageString = langString.toLowerCase();
+    if (lowercaseLanguageString in languages[lang]) {
+      setResult(languages[lang][lowercaseLanguageString]);
     } else {
       setError('Language string doesnt exist');
     }

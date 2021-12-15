@@ -7,14 +7,14 @@ export interface FieldProps {
   children: JSX.Element | JSX.Element[];
 }
 
-export default function Field(props: FieldProps) {
+export default function Field({ labelFor, label, help, children }: FieldProps) {
   return (
     <div className="field mb-4">
-      <label htmlFor={props.labelFor} className="block text-sm font-medium text-gray-700 mb-1">
-        {props.label}
+      <label htmlFor={labelFor} className="block text-sm font-medium text-gray-700 mb-1">
+        {label}
       </label>
-      {props.children}
-      {props.help && <p className="text-xs text-gray-500 mb-2">{props.help}</p>}
+      {children}
+      {help && <p className="text-xs text-gray-500 mb-2">{help}</p>}
     </div>
   );
 }
